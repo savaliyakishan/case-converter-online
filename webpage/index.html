@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body class="overflow-hidden">
+<div class="container bg-secondary ">
+    <div class="container p-5">
+        <p class="text-light">Change Text Case is a handy web application that enables you to change the text case of any given text. Simply copy and paste the text into the text area below and click the required text case.</p>
+        <form action="/answer" method="post">
+            {% csrf_token %}
+            <textarea name="textarea" style="height: 200px;width: 100%;" class="my-4 p-3 border-0 border-top border-4 rounded rounded-1 border-dark " placeholder="Type or paste your content here" autofocus=""></textarea>
+            <div class="row p-3 ">
+                <div class="col-6 fs-4">
+                    <input class="form-check-input" type="checkbox" name="lowercase">
+                    <label class="form-check-label fw-bold" >lower case</label>
+                </div>
+                <div class="col-6 fs-4">
+                    <input class="form-check-input" type="checkbox" name="Sentencecase">
+                    <label class="form-check-label fw-bold" >Sentence case</label>
+                    </div>
+                <div class="col-6 fs-4">
+                    <input class="form-check-input" type="checkbox" name="UPPERCASE">
+                    <label class="form-check-label fw-bold" >UPPER CASE</label>
+                </div>
+                <div class="col-6 fs-4">
+                    <input class="form-check-input" type="checkbox" name="CapitalizedCase">
+                    <label class="form-check-label fw-bold" >Capitalized Case</label>
+                </div>
+                <div class="col-6 fs-4">
+                    <input class="form-check-input" type="checkbox" name="aLtErNaTiNgcAsE">
+                    <label class="form-check-label fw-bold" >aLtErNaTiNg cAsE</label>
+                </div>
+                <div class="col-6 fs-4">
+                    <input class="form-check-input" type="checkbox" name="TitleCase">
+                    <label class="form-check-label fw-bold" >Title Case</label>
+                </div>
+                <div class="col-6 fs-4">
+                    <input class="form-check-input" type="checkbox" name="InVeRsECaSe">
+                    <label class="form-check-label fw-bold" >InVeRsE CaSe</label><br>
+                </div>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-primary me-md-2">Convert </button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
